@@ -1,0 +1,75 @@
+<h2 mat-dialog-title>Detalle de Cita</h2>
+
+<mat-dialog-content>
+  <!-- Header: Resumen de la Cita -->
+  <div class="cita-summary">
+    <div class="summary-header">
+      <div class="summary-item">
+        <mat-icon>event</mat-icon>
+        <div>
+          <span class="label">Fecha y Hora</span>
+          <span class="value">
+            <ng-container *ngIf="'fechaHoraCita' in cita">
+              {{ getFecha() | date: 'dd/MM/yyyy' }} - {{ getFecha() | date: 'HH:mm' }}
+            </ng-container>
+            <ng-container *ngIf="!('fechaHoraCita' in cita)">
+              {{ getFecha() | date: 'dd/MM/yyyy' }} - {{ getHora() }}
+            </ng-container>
+          </span>
+        </div>
+      </div>
+      
+      <div class="summary-item">
+        <mat-icon class="avatar-icon">face</mat-icon>
+        <div>
+          <span class="label">Paciente</span>
+          <span class="value">{{ getNombreMenor() }}</span>
+        </div>
+      </div>
+      
+      <div class="summary-item">
+        <mat-icon>person</mat-icon>
+        <div>
+          <span class="label">Psicólogo</span>
+          <span class="value">{{ getNombrePsicologo() }}</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="summary-footer">
+      <mat-chip-listbox>
+        <mat-chip [class.chip-finalizada]="getEstado() === 'Finalizada'">
+          {{ getEstado() }}
+        </mat-chip>
+      </mat-chip-listbox>
+      <div class="motivo-section">
+        <strong>Motivo:</strong> {{ getMotivo() }}
+      </div>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <!-- Body: Hallazgos Clínicos -->
+  <div class="hallazgos-section">
+    <h3 class="section-title">
+      <mat-icon>description</mat-icon>
+      Notas Clínicas y Hallazgos
+    </h3>
+    
+    <div class="hallazgos-box" *ngIf="getHallazgos(); else sinHallazgos">
+      {{ getHallazgos() }}
+    </div>
+    
+    <ng-template #sinHallazgos>
+      <div class="hallazgos-box sin-hallazgos">
+        <mat-icon>info</mat-icon>
+        <p>Sin notas registradas</p>
+      </div>
+    </ng-template>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cerrar</button>
+</mat-dialog-actions>

@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Admin Asignación List - Estilos específicos
+   ========================================================================== */
+
+/* Contenedor principal */
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Header container - ya definido globalmente, pero reforzamos aquí */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.header-container h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--nk-dark);
+  margin: 0;
+  flex: 1;
+}
+
+/* Botón "Nueva Asignación" - Estilo sólido y profesional */
+.header-container button[mat-flat-button] {
+  background-color: var(--nk-primary) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  min-width: 150px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.header-container button[mat-flat-button]:hover {
+  background-color: var(--nk-primary-dark) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+.header-container button[mat-flat-button] mat-icon {
+  margin-right: 8px !important;
+  font-size: 1.1rem !important;
+}
+
+/* Filtro de búsqueda */
+.dashboard-filter {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Tabla y acciones */
+.nk-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--nk-border);
+}
+
+/* Badges de estado */
+.nk-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  display: inline-block;
+}
+
+.nk-badge--success {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.nk-badge--warn {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.nk-badge--danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Botones de acción en la tabla */
+td.flex button[mat-icon-button] {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+td.flex button[mat-icon-button]:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .header-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-container button[mat-flat-button] {
+    align-self: flex-start;
+    min-width: 140px !important;
+  }
+}

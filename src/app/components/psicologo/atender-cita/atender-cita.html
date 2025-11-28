@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Ficha de Atención Clínica</h2>
+
+<mat-dialog-content>
+  <!-- Header con información del paciente -->
+  <div class="patient-info-header">
+    <div class="patient-main">
+      <mat-icon class="avatar-icon">face</mat-icon>
+      <div>
+        <h3>{{ cita.nombreCompletoMenor }}</h3>
+        <p class="subtitle">Padre/Madre: {{ cita.nombreCompletoPadre }}</p>
+      </div>
+    </div>
+    <div class="cita-details">
+      <p>
+        <mat-icon>event</mat-icon> 
+        <span>{{ cita.fechaHoraCita | date: 'dd/MM/yyyy' }} - {{ cita.fechaHoraCita | date: 'HH:mm' }}</span>
+      </p>
+      <p class="motivo">
+        <strong>Motivo:</strong> {{ cita.motivoCita }}
+      </p>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <!-- Formulario de hallazgos clínicos -->
+  <form [formGroup]="atenderForm" class="clinical-form">
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Hallazgos y Notas Clínicas</mat-label>
+      <textarea 
+        matInput 
+        formControlName="hallazgos" 
+        rows="8" 
+        placeholder="Registre aquí los hallazgos, observaciones, evaluaciones y recomendaciones clínicas de la sesión...">
+      </textarea>
+      <mat-hint>Describa detalladamente los hallazgos de la evaluación y las observaciones clínicas relevantes.</mat-hint>
+      <mat-error *ngIf="atenderForm.get('hallazgos')?.hasError('required')">
+        Este campo es requerido para finalizar la cita
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="Grabar()" [disabled]="atenderForm.invalid">
+    <mat-icon>save</mat-icon> Guardar y Marcar Atendida
+  </button>
+</mat-dialog-actions>

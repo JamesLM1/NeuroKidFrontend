@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Admin Padre List - Estilos específicos
+   ========================================================================== */
+
+/* Contenedor principal - FORZAR ANCHO TOTAL */
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Header container - ya definido globalmente, pero reforzamos aquí */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.header-container h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--nk-dark);
+  margin: 0;
+  flex: 1;
+}
+
+/* Botón "Nuevo Padre" - Estilo sólido y profesional */
+.header-container button[mat-flat-button] {
+  background-color: var(--nk-primary) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  min-width: 150px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.header-container button[mat-flat-button]:hover {
+  background-color: var(--nk-primary-dark) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+.header-container button[mat-flat-button] mat-icon {
+  margin-right: 8px !important;
+  font-size: 1.1rem !important;
+}
+
+/* Filtro de búsqueda */
+.dashboard-filter {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Tabla y acciones */
+.nk-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--nk-border);
+}
+
+/* RESET DE TABLA */
+table {
+  width: 100% !important;
+  table-layout: fixed !important; /* Esto fuerza a respetar los anchos */
+}
+
+/* --- DISTRIBUCIÓN OPTIMIZADA PARA ENCABEZADOS COMPLETOS --- */
+
+/* Columnas de texto (Reducimos un poco) */
+.mat-column-nombre { width: 14%; }
+.mat-column-tipoDocumento { width: 7%; } /* DNI es corto */
+.mat-column-dni { width: 9%; }
+.mat-column-email { width: 18%; }
+.mat-column-telefono { width: 10%; }
+.mat-column-tipoParentesco { width: 10%; }
+
+/* Columnas técnicas (Aumentamos espacio para el Header) */
+.mat-column-claveVisible { width: 11%; text-align: center; }
+.mat-column-estado { width: 10%; text-align: center; }
+.mat-column-actions { width: 11%; text-align: center; }
+
+/* --- OPTIMIZACIÓN DE TEXTO --- */
+
+/* Encabezados más compactos para que quepan */
+.mat-mdc-header-cell {
+  font-size: 12px !important; /* Un poco más pequeño */
+  padding: 0 4px !important;  /* Menos padding lateral = más espacio útil */
+  font-weight: 700 !important;
+  white-space: nowrap; /* No romper línea */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Celdas de datos */
+td.mat-cell {
+  font-size: 13px !important;
+  padding: 0 4px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Compatibilidad con encabezados legacy */
+th.mat-header-cell {
+  font-size: 12px !important;
+  padding: 0 4px !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ALINEACIÓN DE COLUMNAS CENTRADAS */
+.mat-column-tipoDocumento, 
+.mat-column-dni, 
+.mat-column-tipoParentesco,
+.mat-column-claveVisible, 
+.mat-column-estado, 
+.mat-column-actions {
+  text-align: center;
+  justify-content: center;
+}
+
+/* Para encabezados Material con sorting */
+.mat-column-tipoDocumento .mat-sort-header-container,
+.mat-column-dni .mat-sort-header-container,
+.mat-column-tipoParentesco .mat-sort-header-container,
+.mat-column-claveVisible .mat-sort-header-container,
+.mat-column-estado .mat-sort-header-container,
+.mat-column-actions .mat-sort-header-container {
+  justify-content: center;
+}
+
+/* Alineación específica de encabezados */
+.mat-column-tipoDocumento th,
+.mat-column-dni th,
+.mat-column-tipoParentesco th,
+.mat-column-claveVisible th,
+.mat-column-estado th,
+.mat-column-actions th {
+  text-align: center;
+}
+
+/* Alineación de texto en celdas */
+.mat-column-tipoDocumento th,
+.mat-column-tipoDocumento td,
+.mat-column-dni th,
+.mat-column-dni td,
+.mat-column-tipoParentesco th,
+.mat-column-tipoParentesco td,
+.mat-column-claveVisible th,
+.mat-column-claveVisible td,
+.mat-column-estado th,
+.mat-column-estado td,
+.mat-column-actions th,
+.mat-column-actions td {
+  text-align: center !important;
+}
+
+.mat-column-nombre th,
+.mat-column-nombre td,
+.mat-column-email th,
+.mat-column-email td,
+.mat-column-telefono th,
+.mat-column-telefono td {
+  text-align: left !important;
+}
+
+/* Asegurar que las celdas ocupen todo el espacio disponible */
+.mat-mdc-table .mat-mdc-cell,
+.mat-mdc-table .mat-mdc-header-cell {
+  padding: 8px 12px !important;
+  vertical-align: middle !important;
+}
+
+/* Botones de acción en la tabla */
+td.flex button[mat-icon-button] {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+td.flex button[mat-icon-button]:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Estilos para la celda de contraseña */
+.password-cell {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: 140px !important;
+}
+
+.password-text {
+  font-family: 'Courier New', monospace !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  color: var(--nk-primary) !important;
+  background-color: rgba(94, 129, 244, 0.1) !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(94, 129, 244, 0.2) !important;
+  min-width: 80px !important;
+  text-align: center !important;
+}
+
+.password-cell button[mat-icon-button] {
+  width: 32px !important;
+  height: 32px !important;
+  color: var(--nk-primary) !important;
+  opacity: 0.7 !important;
+  transition: all 0.2s ease !important;
+}
+
+.password-cell button[mat-icon-button]:hover {
+  opacity: 1 !important;
+  background-color: rgba(94, 129, 244, 0.1) !important;
+  transform: scale(1.1) !important;
+}
+
+.password-cell button[mat-icon-button] mat-icon {
+  font-size: 16px !important;
+}
+
+/* Estilos para la celda de estado */
+.estado-cell {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 100px !important;
+}
+
+.estado-chip {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 4px 12px !important;
+  border-radius: 16px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.2s ease !important;
+}
+
+.estado-chip.activo {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  color: #2e7d32 !important;
+  border: 1px solid rgba(76, 175, 80, 0.3) !important;
+}
+
+.estado-chip.activo mat-icon {
+  color: #4caf50 !important;
+  font-size: 16px !important;
+}
+
+.estado-chip.inactivo {
+  background-color: rgba(244, 67, 54, 0.1) !important;
+  color: #c62828 !important;
+  border: 1px solid rgba(244, 67, 54, 0.3) !important;
+}
+
+.estado-chip.inactivo mat-icon {
+  color: #f44336 !important;
+  font-size: 16px !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .header-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-container button[mat-flat-button] {
+    align-self: flex-start;
+    min-width: 140px !important;
+  }
+}

@@ -1,0 +1,86 @@
+<section class="nk-form-section">
+  <div class="nk-form-card">
+    <p class="nk-form-eyebrow">Portal NeuroKid</p>
+    <h1 class="nk-form-title">Crear cuenta</h1>
+    <p class="nk-form-subtitle">
+      Elige tu rol y completa tus credenciales para acceder al ecosistema NeuroKid.
+    </p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="Grabar()" class="nk-form">
+      <div class="nk-input-group">
+        <label for="rol">Rol</label>
+        <select id="rol" class="nk-select" formControlName="authorities" required>
+          <option value="" disabled>Selecciona tu rol</option>
+          <option value="ROLE_PADRE">Padre / Apoderado</option>
+          <option value="ROLE_PSICOLOGO">Psicólogo</option>
+          <option value="ROLE_ADMIN">Administrador</option>
+        </select>
+        <p class="nk-field-error" *ngIf="registerForm.get('authorities')?.touched && registerForm.get('authorities')?.hasError('required')">
+          Debes seleccionar un rol.
+        </p>
+      </div>
+
+      <div class="nk-input-group">
+        <label for="email">Correo electrónico</label>
+        <input id="email"
+               class="nk-input"
+               type="email"
+               formControlName="username"
+               placeholder="tu@correo.com"
+               autocomplete="email"
+               required>
+        <p class="nk-field-error" *ngIf="registerForm.get('username')?.touched && registerForm.get('username')?.hasError('required')">
+          Este campo es obligatorio.
+        </p>
+        <p class="nk-field-error" *ngIf="registerForm.get('username')?.touched && registerForm.get('username')?.hasError('email')">
+          Formato de correo no válido.
+        </p>
+      </div>
+
+      <div class="nk-input-group">
+        <label for="password">Contraseña</label>
+        <input id="password"
+               class="nk-input"
+               type="password"
+               formControlName="password"
+               placeholder="••••••••"
+               autocomplete="new-password"
+               required>
+        <p class="nk-field-error" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.hasError('required')">
+          Este campo es obligatorio.
+        </p>
+        <p class="nk-field-error" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.hasError('minlength')">
+          La contraseña debe tener al menos 6 caracteres.
+        </p>
+      </div>
+
+      <div class="nk-input-group">
+        <label for="confirmPassword">Confirmar contraseña</label>
+        <input id="confirmPassword"
+               class="nk-input"
+               type="password"
+               formControlName="confirmPassword"
+               placeholder="••••••••"
+               autocomplete="new-password"
+               required>
+        <p class="nk-field-error" *ngIf="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.hasError('required')">
+          Por favor confirma tu contraseña.
+        </p>
+        <p class="nk-field-error" *ngIf="registerForm.hasError('mismatch') && registerForm.get('confirmPassword')?.touched">
+          Las contraseñas no coinciden.
+        </p>
+      </div>
+
+      <div class="nk-form-actions">
+        <button type="submit" class="btn-primary-nk" [disabled]="registerForm.invalid">
+          <span class="material-icons">person_add</span>
+          Registrarme
+        </button>
+        <p class="nk-form-footer">
+          ¿Ya tienes una cuenta?
+          <a routerLink="/login" class="nk-link">Inicia sesión</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</section>
