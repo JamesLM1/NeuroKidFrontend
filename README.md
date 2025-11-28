@@ -1,59 +1,66 @@
-# Frontend
+<div align="center"> <img src="https://i.imgur.com/qDjDCC8.png" alt="NeuroKid Banner" /> </div> <div align="center"> <h1>NeuroKid - Desarrollo Cognitivo Infantil</h1> </div>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+NeuroKid es una plataforma digital educativa enfocada en la detección temprana de dificultades cognitivas en niños. Utilizando inteligencia artificial, evaluaciones interactivas y un sistema de seguimiento profesional, NeuroKid ofrece herramientas personalizadas para padres, psicólogos y centros educativos que desean potenciar el desarrollo integral infantil desde los primeros años.
 
-## Development server
+---
 
-To start a local development server, run:
+### 🚀 Tecnologías utilizadas
 
-```bash
-ng serve
-```
+Este proyecto fue desarrollado aplicando tecnologías web modernas, centradas en la eficiencia, accesibilidad y experiencia del usuario:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+-   HTML5 & CSS3 – Base del desarrollo web semántico y responsivo.
+-   JavaScript – Validación de formularios e interacción del cliente.
+-   Astro (recomendado para futuras versiones) – Framework para sitios estáticos rápidos.
+-   FormSubmit – Servicio para envío de formularios sin backend.
+-   GitHub Pages – Hosting del sitio web estático.
+-   Postman – Herramienta para probar y documentar APIs.
+-   IntelliJ IDEA – Entorno de desarrollo integrado para el backend.
+-   PostgreSQL – Sistema de gestión de bases de datos relacional.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 👥 Equipo de Desarrollo
 
-```bash
-ng generate component component-name
-```
+- James Lucas Moreto - U202317816
+- Granados Medina, Jose Faustino - U202319097
+- Zenaida Quispe Taco - U202120634
+- Luis Enrique Chavez Estrada - U201918169
+- Ener Andres Bonifacio Espíritu - U202120718
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+### 📜 Changelog
 
-## Building
+#### _Versión 0.3.2_
 
-To build the project run:
+- Se mejoró la sección de contacto empresarial.
+- Se implementó validación de formularios con mensajes de éxito y error.
+- Se adaptó código externo para enviar formularios usando JS y FormSubmit.
 
-```bash
-ng build
-```
+#### _Versión 0.3.1_
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Se agregó la página de registro dual para usuarios (padres) y profesionales (psicólogos).
+- Estilos adaptados con diseño limpio y responsivo para formularios.
 
-## Running unit tests
+#### _Versión 0.3.0_
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Se actualizó el diseño del landing page.
+- Integración de secciones nuevas: Testimonios, Formulario de Opinión, CTA para empresas.
 
-```bash
-ng test
-```
+#### _Versión 0.2.0_
 
-## Running end-to-end tests
+- Se implementó el diseño completo de Sobre Nosotros, incluyendo Misión, Visión y Equipo.
+- Mejora de estructura HTML semántica y uso de componentes reutilizables.
 
-For end-to-end (e2e) testing, run:
+#### _Versión 0.1.0_
 
-```bash
-ng e2e
-```
+- Estructura inicial del sitio creada.
+- Página principal con secciones de introducción, soluciones y navegación funcional.
+- Se configuró GitHub Pages para despliegue automático.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+### 📌 Estado del Proyecto
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🔧 En desarrollo activo – nuevas funcionalidades como sistema de autenticación, reportes cognitivos y generación de alertas serán implementadas en futuras versiones.
+
