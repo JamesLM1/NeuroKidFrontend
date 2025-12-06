@@ -16,6 +16,8 @@ import { PSICOLOGOInformeDTO } from '../../../models/psicologo-informe.dto';
 import { ADMINAsignacionDTO } from '../../../models/admin-asignacion.dto';
 import { AddInformeComponent } from '../add-informe/add-informe';
 
+
+
 @Component({
   selector: 'app-psicologo-informe-list',
   standalone: true, // <-- CAMBIADO A TRUE
