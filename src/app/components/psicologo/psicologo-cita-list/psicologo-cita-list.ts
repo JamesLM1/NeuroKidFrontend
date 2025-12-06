@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs'; // <-- Probablemente usas tabs (Próximas/Historial)
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+
 @Component({
   selector: 'app-psicologo-cita-list',
   standalone: true, // <-- CORRECCIÓN 1: Cambiado a true
