@@ -14,13 +14,13 @@ import { MatChipsModule } from '@angular/material/chips';
 type CitaDTO = PADRECitaResponseDTO | PSICOLOGOCitaResponseDTO;
 
 @Component({
-  selector: 'app-detalle-cita',
+  selector: 'app-detalle-cita',ewqewqdhgcdygqwcdcwquydcyqwcdwqhjdwqgjdwqdbwqdvuwqyvdwqvdwqvdqwvduqwvdkwqbduyvskagdasv d
   standalone: true,
   imports: [
     CommonModule,
     MatDialogModule,
     MatButtonModule,
-    MatIconModule,
+    MatIconModule,dwqduytfwqydcuwqgvdywqcduwqcduwqduwqyd
     MatDividerModule,
     MatChipsModule
   ],
