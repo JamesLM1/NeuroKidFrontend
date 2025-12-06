@@ -24,6 +24,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
+
+
 @Component({
   selector: 'app-psicologo-cita-list',
   standalone: true, // <-- CORRECCIÓN 1: Cambiado a true
