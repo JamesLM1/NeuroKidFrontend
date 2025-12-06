@@ -35,7 +35,10 @@ export class DetalleCitaComponent {
     public dialogRef: MatDialogRef<DetalleCitaComponent>,
     @Inject(MAT_DIALOG_DATA) data: CitaDTO
   ) {
-    this.cita = data;
+    this.cita = data;ihyduvfuewyfuywefvuewfieuwbfweuvfhjevfuwefvgujebfbewbvckjsdh fgwelfbuedowqebdfuyqgwdlkhqwi
+    hvdewvdhjewd
+    jhdjuiwegqdiuwq
+    ijbdwgqd
   }
 
   // Métodos auxiliares para acceder a los campos de forma unificada
