@@ -12,7 +12,7 @@ import { PSICOLOGODashboardDTO } from '../models/psicologo-dashboard.dto';
 
 @Injectable({
   providedIn: 'root'
-})
+})//gs
 export class PsicologoService {
 
   ruta_servidor: string = "http://localhost:8080/api/psicologos";
