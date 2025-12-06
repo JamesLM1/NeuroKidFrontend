@@ -8,6 +8,7 @@
       <mat-select formControlName="padreId" required>
         <mat-option *ngFor="let padre of padres" [value]="padre.padreId">
           {{ padre.nombre }} {{ padre.apellido }}
+          
         </mat-option>
       </mat-select>
       <mat-error>Requerido</mat-error>
