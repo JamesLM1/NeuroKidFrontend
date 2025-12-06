@@ -16,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
 
 
 
+
+
 @Component({
   selector: 'app-add-informe',
   standalone: true, // <-- Mantenemos esto en true
