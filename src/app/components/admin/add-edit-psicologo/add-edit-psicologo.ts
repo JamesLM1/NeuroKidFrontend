@@ -13,7 +13,7 @@ import { ADMINPsicologoDTO } from '../../../models/admin-psicologo.dto';
   styleUrls: ['./add-edit-psicologo.css']
 })
 
-  
+
   
 export class AddEditPsicologoComponent implements OnInit {
 
