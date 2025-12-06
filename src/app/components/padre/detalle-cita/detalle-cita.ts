@@ -6,7 +6,9 @@ import { PSICOLOGOCitaResponseDTO } from '../../../models/psicologo-cita-respons
 // Módulos necesarios para la plantilla HTML
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/mate
+
+
 import { MatDividerModule } from '@angular/material/divider';
 import { MatChipsModule } from '@angular/material/chips';
 
