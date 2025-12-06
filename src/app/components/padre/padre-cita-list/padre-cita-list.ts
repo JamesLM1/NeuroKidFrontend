@@ -23,6 +23,12 @@ export class PadreCitaListComponent implements OnInit {
   // Dos tablas: una para próximas, otra para historial
   displayedColumns: string[] = ['fecha', 'horaInicio', 'menor', 'psicologo', 'estado', 'actions'];
   dsProximas = new MatTableDataSource<PADRECitaResponseDTO>();
+
+
+  diuwqgduyvwq
+  dniuowqguui8dywq
+
+  dwquogdwq
   dsHistorial = new MatTableDataSource<PADRECitaResponseDTO>();
 
   constructor(
