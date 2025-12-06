@@ -16,7 +16,7 @@ import { PADREMenorDTO } from '../models/padre-menor.dto';
 export class AdminService {
   ruta_servidor: string = "http://localhost:8080/api/admin";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }//xd
 
   // --- GESTIÓN DE PADRES (ADMIN) ---
   getAllPadres(): Observable<ADMINPadreDTO[]> {
