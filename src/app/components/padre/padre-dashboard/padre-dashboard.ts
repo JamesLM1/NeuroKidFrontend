@@ -55,6 +55,16 @@ export class PadreDashboardComponent implements OnInit {
             new Date(a.fecha).getTime() - new Date(b.fecha).getTime()
           )[0];
           console.log('✅ Próxima cita:', this.proximaCita);
+
+          dbiwuqydviuywq
+
+          dbijowuqvduywq
+
+          dgwqfxdrywq
+          dujhgwqfcdytgwq
+          duvtwq7q
+          dvuqyfdiuqg
+          vduqytwfd97q
         } else {
           this.proximaCita = null;
           console.log('ℹ️ No hay próximas citas');
