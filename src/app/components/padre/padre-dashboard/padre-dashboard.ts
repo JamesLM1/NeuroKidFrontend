@@ -21,6 +21,16 @@ export class PadreDashboardComponent implements OnInit {
   }
 
   selectTab(tab: string): void {
+
+
+    dniuweqviudyvqw
+    kijbdqwiuvd
+    dbiujwgqdyiufwq
+
+    duwgqcdytwqd
+
+    dwqgvdtwqydoiuqw
+    
     this.activeTab = tab;
   }
 
