@@ -69,6 +69,8 @@ export class PsicologoDashboardComponent implements OnInit {
     private snackBar: MatSnackBar
   ) { }
 
+
+  
   ngOnInit(): void {
     this.cargarDatosDashboard();
   }
