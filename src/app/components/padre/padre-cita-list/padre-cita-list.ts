@@ -13,7 +13,11 @@ import { ConfirmationDeleteComponent, ConfirmDialogData } from '../../shared/con
   standalone: false,
   templateUrl: './padre-cita-list.html',
   styleUrls: ['./padre-cita-list.css']
-})
+})dwekqndijkbiwqw
+
+
+
+
 export class PadreCitaListComponent implements OnInit {
 
   // Dos tablas: una para próximas, otra para historial
