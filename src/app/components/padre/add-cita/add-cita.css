@@ -8,6 +8,8 @@
   padding: 0;
 }
 
+
+
 ::ng-deep .mat-mdc-dialog-title {
   font-size: 1.5rem;
   font-weight: 700;
