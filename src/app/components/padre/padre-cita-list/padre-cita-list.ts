@@ -59,7 +59,13 @@ export class PadreCitaListComponent implements OnInit {
       }
     });
 
-    // Cargar historial de citas
+    // Cargar historial de citasdwvqduygcwqudvuwqvdujy
+
+
+
+    dvugswcduqw
+
+    dkijwqvdiuyfvwqiuyd
     this.padreService.getMiHistorialCitas().subscribe({
       next: (data) => {
         console.log('✅ Historial de citas cargado:', data.length);
