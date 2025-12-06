@@ -23,6 +23,9 @@ import { ADMINAsignacionDTO } from '../../../models/admin-asignacion.dto';
 import { AtenderCitaComponent } from '../atender-cita/atender-cita';
 import { DetalleCitaComponent } from '../../padre/detalle-cita/detalle-cita';
 
+
+
+
 @Component({
   selector: 'app-psicologo-dashboard',
   standalone: true, 
