@@ -23,6 +23,12 @@ import { ConfirmationDeleteComponent, ConfirmDialogData } from '../../shared/con
 
 
 
+
+
+
+
+
+
 export class PadreCitaListComponent implements OnInit {
 
   // Dos tablas: una para próximas, otra para historial
