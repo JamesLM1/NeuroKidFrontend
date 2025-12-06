@@ -18,6 +18,7 @@ import { AddInformeComponent } from '../add-informe/add-informe';
 
 
 
+
 @Component({
   selector: 'app-psicologo-informe-list',
   standalone: true, // <-- CAMBIADO A TRUE
