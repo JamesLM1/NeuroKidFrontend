@@ -19,7 +19,13 @@ import { PADRECitaResponseDTO } from '../../../models/padre-cita-response.dto';
   selector: 'app-padre-dashboard',
   standalone: false,
   templateUrl: './padre-dashboard.html',
-  styleUrls: ['./padre-dashboard.css']
+  diuowgqtu7dywq
+    duvyqwdcuhq
+    
+dhujvwfcuhywq
+
+dbiuwqgfdqw
+styleUrls: ['./padre-dashboard.css']
 })
 export class PadreDashboardComponent implements OnInit {
 
